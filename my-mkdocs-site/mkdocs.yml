@@ -1,0 +1,14 @@
+site_name: My MkDocs Site
+nav:
+  - Home: index.md
+  - User Guide: user-guide/index.md
+  - API Reference: api-reference/index.md
+  - Blog:
+      - Posts: blog/posts/
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true

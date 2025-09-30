@@ -1,0 +1,8 @@
+title = "My Hugo Site"
+baseURL = "http://example.com/"
+languageCode = "en-us"
+theme = "your-theme-name"
+
+[params]
+  description = "A brief description of your site"
+  author = "Your Name"

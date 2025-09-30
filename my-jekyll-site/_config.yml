@@ -1,0 +1,24 @@
+# Ask Copilot: "Create a Jekyll _config.yml for a personal blog"
+title: Your Blog Title
+description: A blog about technology and coding
+author: Fran Membibre
+email: franciscof@gilat.com
+url: https://[your-username].github.io
+
+# Theme
+theme: minima  # or another theme
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Social links
+twitter_username: yourhandle
+github_username: yourusername
+linkedin_username: yourprofile
