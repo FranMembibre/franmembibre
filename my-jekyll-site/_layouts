@@ -1,1 +1,38 @@
-<!-- This file is intentionally left blank. -->
+<!-- _layouts/custom-post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .reading-time { color: #888; font-size: 0.9em; margin-left: 10px; }
+        .share-buttons { margin-top: 20px; }
+        .share-buttons a { margin-right: 10px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <article class="post">
+        <header>
+            <h1>{{ page.title }}</h1>
+            <time>{{ page.date | date: "%B %d, %Y" }}</time>
+            <span class="reading-time">
+                {% assign words = content | number_of_words %}
+                {% assign minutes = words | divided_by:200 | ceil %}
+                {{ minutes }} min read
+            </span>
+        </header>
+        
+        {{ content }}
+        
+        <footer>
+            <div class="share-buttons">
+                <span>Share:</span>
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank">Twitter</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+    </article>
+</body>
+</html>
